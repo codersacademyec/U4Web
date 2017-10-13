@@ -18,7 +18,7 @@
       display: block;
       right: 0;
       bottom: 0;
-      margin-right: 1000px;
+      margin-right: 1090px;
       margin-bottom: 40px;
       z-index: 900;
     }
