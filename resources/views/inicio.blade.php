@@ -18,9 +18,24 @@
       display: block;
       right: 0;
       bottom: 0;
-      margin-right: 40px;
+      margin-right: 1000px;
       margin-bottom: 40px;
       z-index: 900;
+    }
+
+    .payphone{
+    	position: relative;
+			padding: 8px 30px;
+			border: 0;
+			margin: 10px 1px;
+			cursor: pointer;
+			border-radius: 2px;
+			text-transform: uppercase;
+			text-decoration: none;
+			color: rgba(255,255,255,.84) !important;
+			transition: background-color .2s ease,box-shadow .28s cubic-bezier(.4,0,.2,1);
+			outline: none!important;
+			background-color:#ff9100;
     }
     </style>
  </head>
@@ -106,6 +121,9 @@
           <!--div class="logo-font android-create-character">
             <a href=""><img src="images/andy.png"> create your android character</a>
           </div-->
+          <div style="padding-top: 250px;">
+			<a href="https:&#x2F;&#x2F;payment.payphonetodoesposible.com&#x2F;/Pay/500/6190477d-a58c-4a97-86ce-73cfe61d5962/es/" class="payphone" onmouseover="this.style.backgroundColor='#ff8400'" onmouseout="this.style.backgroundColor='#ff9100'">Pagar $5 con PayPhone</a>
+		  </div>
 
           <a href="#screens">
             <button class="android-fab mdl-button mdl-button--colored mdl-js-button mdl-button--fab mdl-js-ripple-effect">
