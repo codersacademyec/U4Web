@@ -122,7 +122,7 @@
             <a href=""><img src="images/andy.png"> create your android character</a>
           </div-->
           <div style="padding-top: 250px;">
-			<a href="https:&#x2F;&#x2F;payment.payphonetodoesposible.com&#x2F;/Pay/500/6190477d-a58c-4a97-86ce-73cfe61d5962/es/" class="payphone" onmouseover="this.style.backgroundColor='#ff8400'" onmouseout="this.style.backgroundColor='#ff9100'">Pagar $5 con PayPhone</a>
+			<a href="https:&#x2F;&#x2F;payment.payphonetodoesposible.com&#x2F;/Pay/1000/6190477d-a58c-4a97-86ce-73cfe61d5962/es/" class="payphone" onmouseover="this.style.backgroundColor='#ff8400'" onmouseout="this.style.backgroundColor='#ff9100'">Pagar $5 con PayPhone</a>
 		  </div>
 
           <a href="#screens">
