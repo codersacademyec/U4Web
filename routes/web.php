@@ -16,6 +16,6 @@
 });*/
 
 Route::get('/', function () {
-    return view('inicio');
+    return view('index');
 });
 
