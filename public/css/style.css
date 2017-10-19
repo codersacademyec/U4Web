@@ -20,6 +20,13 @@ p {
   line-height: 2rem;
 }
 
+.fbutton{
+  font-size: 14px;
+}
+
+.line{
+  border-style: dotted;
+}
  .payphone{
     	position: relative;
 			padding: 8px 30px;

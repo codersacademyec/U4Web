@@ -4726,8 +4726,9 @@ small {
 }
 
 .card .card-title {
-  font-size: 24px;
+  font-size: 40px;
   font-weight: 300;
+  font-family: 'Indie Flower', cursive;
 }
 
 .card .card-title.activator {
