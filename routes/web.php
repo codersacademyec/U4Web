@@ -19,3 +19,4 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::post('/enviarmensaje', 'inicioController@mensaje' );

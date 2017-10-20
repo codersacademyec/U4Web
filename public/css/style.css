@@ -20,6 +20,30 @@ p {
   line-height: 2rem;
 }
 
+.fbutton{
+  font-size: 14px;
+}
+
+.ft{
+  font-size: 16px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.borde{
+  border-style: solid; 
+  border-width: 0.5px;
+}
+
+.com{ 
+    color: black;
+    font-weight: bold;
+    font-size: -webkit-xxx-large;
+}
+
+.line{
+  border-style: dotted;
+}
  .payphone{
     	position: relative;
 			padding: 8px 30px;

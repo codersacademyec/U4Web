@@ -4726,8 +4726,9 @@ small {
 }
 
 .card .card-title {
-  font-size: 24px;
+  font-size: 40px;
   font-weight: 300;
+  font-family: 'Indie Flower', cursive;
 }
 
 .card .card-title.activator {
@@ -5285,11 +5286,12 @@ button.btn-floating {
 
 .fixed-action-btn {
   position: fixed;
-  right: 23px;
+  /*right: 23px;*/
   bottom: 23px;
   padding-top: 15px;
   margin-bottom: 0;
   z-index: 997;
+  left: 20px; /*Added*/
 }
 
 .fixed-action-btn.active ul {
