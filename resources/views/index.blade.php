@@ -18,16 +18,26 @@
         <li><a href="">INICIO</a></li>
         <li><a href="#company">EMPRESA</a></li>
         <li><a href="#services">PLANES/SERVICIOS</a></li>
+<<<<<<< HEAD
         <li><a href="#portafolio">PORTAFOLIO</a></li>
         <li><a href="#contacto">CONTACTO</a></li>
+=======
+        <li><a href="">PORTAFOLIO</a></li>
+        <li><a href="#footer">CONTACTO</a></li>
+>>>>>>> 25292b44535413391d7b8f23f2b124f61f93f796
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
         <li><a href="">Inicio</a></li>
         <li><a href="#company">Empresa</a></li>
         <li><a href="#services">Planes/Servicios</a></li>
+<<<<<<< HEAD
         <li><a href="#portafolio">Portafolio</a></li>
         <li><a href="#contacto">Contacto</a></li>
+=======
+        <li><a href="">Portafolio</a></li>
+        <li><a href="#footer">Contacto</a></li>
+>>>>>>> 25292b44535413391d7b8f23f2b124f61f93f796
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
@@ -153,6 +163,8 @@
                   <div class="card-action">
                   <a href="https:&#x2F;&#x2F;payment.payphonetodoesposible.com&#x2F;/Pay/1000/6190477d-a58c-4a97-86ce-73cfe61d5962/es/" class="waves-effect waves-light btn fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#4CAF50'">Pagar $350 usd + iva con PayPhone</a>
                  </div>
+<<<<<<< HEAD
+=======
               </div>
                </div>
 
@@ -165,6 +177,39 @@
                     <p> Interaccion con seguidores </p>
                     <p> Respuestas a consultas básicas de los usuarios</p>
                     <h5>Gestión de dos redes sociales</h5>
+                    <p> 20 post al mes</p>
+                    <p>Diseño - contenidos</p>
+                    <p>12 fotos mensuales</p>
+                    <h5>Paquete de clics</h5>
+                    <p>1000 clics ads</p>
+                    <h5>Video promocional de 30 segundos</h5>
+                     <p>1 video promocional de marca</p>
+                     <h5>Informe de rendimiento</h5>
+                    <p>Quincenal</p>
+                  </div>
+                  <div class="card-action">
+                     <a href="https:&#x2F;&#x2F;payment.payphonetodoesposible.com&#x2F;/Pay/1000/6190477d-a58c-4a97-86ce-73cfe61d5962/es/" class="waves-effect waves-light btn fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#4CAF50'">Pagar $550 usd + iva con PayPhone</a>
+                 </div>
+>>>>>>> 25292b44535413391d7b8f23f2b124f61f93f796
+              </div>
+               </div>
+
+               <div class="col s12 m4">
+<<<<<<< HEAD
+                <div class="card teal">
+                  <div class="card-content white-text">
+                    <span class="card-title center">Pymes 2.0</span>
+=======
+                <div class="card green">
+                  <div class="card-content white-text">
+                    <span class="card-title center">Pymes 3.0</span>
+>>>>>>> 25292b44535413391d7b8f23f2b124f61f93f796
+                    <hr class="line">
+                    <h5>Community Manager</h5>
+                    <p> Interaccion con seguidores </p>
+                    <p> Respuestas a consultas básicas de los usuarios</p>
+                    <h5>Gestión de dos redes sociales</h5>
+<<<<<<< HEAD
                     <p> 20 post al mes</p>
                     <p>Diseño - contenidos</p>
                     <p>12 fotos mensuales</p>
@@ -208,6 +253,26 @@
                      <a href="https:&#x2F;&#x2F;payment.payphonetodoesposible.com&#x2F;/Pay/1000/6190477d-a58c-4a97-86ce-73cfe61d5962/es/" class="waves-effect waves-light btn" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#8bc34a'">Pagar $700 usd + iva con PayPhone</a>
                  </div>
               </div>
+=======
+                    <p> 24 post al mes</p>
+                    <p>Diseño - contenidos</p>
+                    <p>15 fotos mensuales</p>
+                    <h5>Paquete de clics</h5>
+                    <p>2000 clics ads</p>
+                    <h5>Email Mrketing</h5>
+                    <p>Quincenal</p>
+                    <h5>Base de Datos</h5>
+                    <p>Propia de la empresa en base a fans</p>
+                    <h5>Video promocional de 30 segundos</h5>
+                    <p>1 video promocional de marca</p>
+                    <h5>Informe de rendimiento</h5>
+                    <p>Quincenal</p>
+                  </div>
+                  <div class="card-action">
+                     <a href="https:&#x2F;&#x2F;payment.payphonetodoesposible.com&#x2F;/Pay/1000/6190477d-a58c-4a97-86ce-73cfe61d5962/es/" class="waves-effect waves-light btn" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#8bc34a'">Pagar $700 usd + iva con PayPhone</a>
+                 </div>
+              </div>
+>>>>>>> 25292b44535413391d7b8f23f2b124f61f93f796
 
                </div>
 
@@ -264,6 +329,21 @@
     <div class="parallax"><img src="images/contacto.jpg" alt="Unsplashed background img 3"></div>
   </div>
 
+<<<<<<< HEAD
+=======
+  <footer class="page-footer teal" id="footer">
+    <div class="container center">
+      <div class="row">
+        <div class="col l12 s12">
+          <img src="images/logo-principal.png" alt="logo principal" class="responsive-img"></a>
+          <h4 class="grey-text text-lighten-4">Servicios de Marketing digital y Branding</h4>
+          <h5 class="grey-text text-lighten-4">Direccion: Bálsamos 813, entre Guayacanes e Higueras</h5>
+          <h5 class="grey-text text-lighten-4">Telf: 097 899 6194</h5>
+          <h5 class="grey-text text-lighten-4">Email: info@u4crm.com</h5>
+          <h5 class="grey-text text-lighten-4">Guayaquil - Machala</h5>
+          <h5 class="grey-text text-lighten-4">Ecuador</h5>
+          <h5 class="grey-text text-lighten-4">2017 | Todos los derechos reservados</h5>
+>>>>>>> 25292b44535413391d7b8f23f2b124f61f93f796
 
 
    <div class="container">
@@ -290,6 +370,7 @@
           <textarea id="mensaje" class="validate materialize-textarea" name="mensaje"></textarea>
           <label for="mensaje">Mensaje</label>
         </div>
+<<<<<<< HEAD
          <button class="btn waves-effect waves-light" type="submit">Enviar<i class="material-icons right">send</i></button>
         </div>
          </form>
@@ -313,6 +394,26 @@
 
 
         </div>
+=======
+        <!--div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div-->
+>>>>>>> 25292b44535413391d7b8f23f2b124f61f93f796
       </div>
     </div>
     <div class="footer-copyright">
