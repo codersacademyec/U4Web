@@ -263,19 +263,6 @@
     <div class="parallax"><img src="images/contacto.jpg" alt="Unsplashed background img 3"></div>
   </div>
 
-  <footer class="page-footer teal" id="footer">
-    <div class="container center">
-      <div class="row">
-        <div class="col l12 s12">
-          <img src="images/logo-principal.png" alt="logo principal" class="responsive-img"></a>
-          <h4 class="grey-text text-lighten-4">Servicios de Marketing digital y Branding</h4>
-          <h5 class="grey-text text-lighten-4">Direccion: Bálsamos 813, entre Guayacanes e Higueras</h5>
-          <h5 class="grey-text text-lighten-4">Telf: 097 899 6194</h5>
-          <h5 class="grey-text text-lighten-4">Email: info@u4crm.com</h5>
-          <h5 class="grey-text text-lighten-4">Guayaquil - Machala</h5>
-          <h5 class="grey-text text-lighten-4">Ecuador</h5>
-          <h5 class="grey-text text-lighten-4">2017 | Todos los derechos reservados</h5>
-
 
    <div class="container">
     <div class="section">
