@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -34,4 +33,5 @@ class inicioController extends Controller
     //->with('message', 'Mensaje enviado');
     //dd($request->all());
     }
+
 }

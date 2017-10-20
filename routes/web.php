@@ -19,6 +19,10 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/response', function () {
+    return view('response');
+});
+
 Route::get('/index', function () {
 	    return view('index');
 	})->name('index');
