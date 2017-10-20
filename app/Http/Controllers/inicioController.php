@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class inicioController extends Controller
 {
-     public function mensaje(Request $request){
+    public function mensaje(Request $request){
 
      $this->validate($request, [
             'nombre' => 'required',
@@ -15,7 +15,7 @@ class inicioController extends Controller
             'mensaje' => 'required',
         ]);
 
-     $email_to = 'lopez.scarlhet@gmail.com';
+     $email_to = 'info@u4crm.com';
      $email_subject = $request->input('asunto');
 	 $email_from = $request->input('email');
 
@@ -30,6 +30,8 @@ class inicioController extends Controller
 	$headers.= "cc: " . $email_from . " <" . $email_from . ">" . "\r\n" ;
 	mail($email_to, $email_subject, $email_message, $headers);
 
+    return redirect()->route('index');
+    //->with('message', 'Mensaje enviado');
     //dd($request->all());
     }
 }

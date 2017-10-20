@@ -151,7 +151,7 @@
                     
                   </div>
                   <div class="card-action">
-                  <a href="https:&#x2F;&#x2F;payment.payphonetodoesposible.com&#x2F;/Pay/1000/6190477d-a58c-4a97-86ce-73cfe61d5962/es/" class="waves-effect waves-light btn fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#4CAF50'">Pagar $350 usd + iva con PayPhone</a>
+                  <a href="https:&#x2F;&#x2F;payment.payphonetodoesposible.com&#x2F;/Pay/35000/6190477d-a58c-4a97-86ce-73cfe61d5962/es/" class="waves-effect waves-light btn fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#4CAF50'">Pagar $350 usd + iva con PayPhone</a>
                  </div>
               </div>
                </div>
@@ -176,7 +176,7 @@
                     <p>Quincenal</p>
                   </div>
                   <div class="card-action">
-                     <a href="https:&#x2F;&#x2F;payment.payphonetodoesposible.com&#x2F;/Pay/1000/6190477d-a58c-4a97-86ce-73cfe61d5962/es/" class="waves-effect waves-light btn fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#4CAF50'">Pagar $550 usd + iva con PayPhone</a>
+                     <a href="https:&#x2F;&#x2F;payment.payphonetodoesposible.com&#x2F;/Pay/55000/6190477d-a58c-4a97-86ce-73cfe61d5962/es/" class="waves-effect waves-light btn fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#4CAF50'">Pagar $550 usd + iva con PayPhone</a>
                  </div>
               </div>
                </div>
@@ -206,7 +206,7 @@
                     <p>Quincenal</p>
                   </div>
                   <div class="card-action">
-                     <a href="https:&#x2F;&#x2F;payment.payphonetodoesposible.com&#x2F;/Pay/1000/6190477d-a58c-4a97-86ce-73cfe61d5962/es/" class="waves-effect waves-light btn" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#8bc34a'">Pagar $700 usd + iva con PayPhone</a>
+                     <a href="https:&#x2F;&#x2F;payment.payphonetodoesposible.com&#x2F;/Pay/75000/6190477d-a58c-4a97-86ce-73cfe61d5962/es/" class="waves-effect waves-light btn" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#8bc34a'">Pagar $700 usd + iva con PayPhone</a>
                  </div>
               </div>
             </div>
