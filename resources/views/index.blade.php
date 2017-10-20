@@ -185,33 +185,6 @@
               </div>
                </div>
 
-               <div class="col s12 m4">
-                <div class="card teal">
-                  <div class="card-content white-text">
-                    <span class="card-title center">Pymes 2.0</span>
-                <div class="card green">
-                  <div class="card-content white-text">
-                    <span class="card-title center">Pymes 3.0</span>
-                    <hr class="line">
-                    <h5>Community Manager</h5>
-                    <p> Interaccion con seguidores </p>
-                    <p> Respuestas a consultas básicas de los usuarios</p>
-                    <h5>Gestión de dos redes sociales</h5>
-                    <p> 20 post al mes</p>
-                    <p>Diseño - contenidos</p>
-                    <p>12 fotos mensuales</p>
-                    <h5>Paquete de clics</h5>
-                    <p>1000 clics ads</p>
-                    <h5>Video promocional de 30 segundos</h5>
-                     <p>1 video promocional de marca</p>
-                     <h5>Informe de rendimiento</h5>
-                    <p>Quincenal</p>
-                  </div>
-                  <div class="card-action">
-                     <a href="https:&#x2F;&#x2F;payment.payphonetodoesposible.com&#x2F;/Pay/1000/6190477d-a58c-4a97-86ce-73cfe61d5962/es/" class="waves-effect waves-light btn fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#4CAF50'">Pagar $550 usd + iva con PayPhone</a>
-                 </div>
-              </div>
-               </div>
 
                <div class="col s12 m4">
                 <div class="card green">
@@ -240,28 +213,8 @@
                      <a href="https:&#x2F;&#x2F;payment.payphonetodoesposible.com&#x2F;/Pay/1000/6190477d-a58c-4a97-86ce-73cfe61d5962/es/" class="waves-effect waves-light btn" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#8bc34a'">Pagar $700 usd + iva con PayPhone</a>
                  </div>
               </div>
-                    <p> 24 post al mes</p>
-                    <p>Diseño - contenidos</p>
-                    <p>15 fotos mensuales</p>
-                    <h5>Paquete de clics</h5>
-                    <p>2000 clics ads</p>
-                    <h5>Email Mrketing</h5>
-                    <p>Quincenal</p>
-                    <h5>Base de Datos</h5>
-                    <p>Propia de la empresa en base a fans</p>
-                    <h5>Video promocional de 30 segundos</h5>
-                    <p>1 video promocional de marca</p>
-                    <h5>Informe de rendimiento</h5>
-                    <p>Quincenal</p>
-                  </div>
-                  <div class="card-action">
-                     <a href="https:&#x2F;&#x2F;payment.payphonetodoesposible.com&#x2F;/Pay/1000/6190477d-a58c-4a97-86ce-73cfe61d5962/es/" class="waves-effect waves-light btn" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#8bc34a'">Pagar $700 usd + iva con PayPhone</a>
-                 </div>
-              </div>
-
-               </div>
-
-             </div>  
+            </div>
+ 
         </div>
       </div>
    </div>
