@@ -20,8 +20,6 @@
         <li><a href="#services">PLANES/SERVICIOS</a></li>
         <li><a href="#portafolio">PORTAFOLIO</a></li>
         <li><a href="#contacto">CONTACTO</a></li>
-        <li><a href="">PORTAFOLIO</a></li>
-        <li><a href="#footer">CONTACTO</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
@@ -30,8 +28,6 @@
         <li><a href="#services">Planes/Servicios</a></li>AD
         <li><a href="#portafolio">Portafolio</a></li>
         <li><a href="#contacto">Contacto</a></li>
-        <li><a href="">Portafolio</a></li>
-        <li><a href="#footer">Contacto</a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
@@ -288,28 +284,30 @@
         <div class="col s12 center">
           <h3><i class="mdi-content-send brown-text"></i></h3>
           <form action="/enviarmensaje" method="POST">
-             {{ csrf_field() }}
-            <div class="input-field col s6">
-              <input id="name" type="text" class="validate" name="nombre"/>
-              <label for="name">Nombre y apellido</label>
-          </div>
-          <div class="input-field col s6">
-            <input id="email" type="email" class="validate" name="email"/>
-            <label for="email">Email</label>
-          </div>
-          <div class="input-field col s12">
-              <input id="asunto" type="text" class="validate" name="asunto"/>
-              <label for="asunto">Asunto</label>
-          </div>
-         <div class="input-field col s12">
-          <textarea id="mensaje" class="validate materialize-textarea" name="mensaje"></textarea>
-          <label for="mensaje">Mensaje</label>
+                 {{ csrf_field() }}
+              <div class="input-field col s6">
+                  <input id="name" type="text" class="validate" name="nombre"/>
+                  <label for="name">Nombre y apellido</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="email" type="email" class="validate" name="email"/>
+                <label for="email">Email</label>
+              </div>
+              <div class="input-field col s12">
+                  <input id="asunto" type="text" class="validate" name="asunto"/>
+                  <label for="asunto">Asunto</label>
+              </div>
+             <div class="input-field col s12">
+              <textarea id="mensaje" class="validate materialize-textarea" name="mensaje"></textarea>
+              <label for="mensaje">Mensaje</label>
+            </div>
+             <button class="btn waves-effect waves-light" type="submit">Enviar<i class="material-icons right">send</i></button>
+          </form>
         </div>
-         <button class="btn waves-effect waves-light" type="submit">Enviar<i class="material-icons right">send</i></button>
-        </div>
-         </form>
+         
       </div>
     </div>
+  </div>
   </div>
   
 
