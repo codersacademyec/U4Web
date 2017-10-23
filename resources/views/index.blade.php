@@ -9,6 +9,10 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" href="css/colorbox.css" type="text/css">
+  <link rel="stylesheet" href="css/animate.css" type="text/css">
+  <link href="js/owl-carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="js/owl-carousel/assets/owl.theme.default.min.css" rel="stylesheet">
 </head>
 <body>
   <nav class="transparent" role="navigation" id="top">
@@ -37,7 +41,7 @@
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center text-lighten-2 mov ">BIENVENIDOS</h1>
+        <h1 class="header center text-lighten-2 mov">BIENVENIDOS</h1>
         <div class="row center">
           <!--h5 class="header col s12 light">U4Innovation</h5-->
         </div>
@@ -220,7 +224,40 @@
       <div class="section">
         <div class="row">
           <div class="col s12 center" id="portafolio">  
+
             <h3 class="strong">Portafolio</h3>
+
+            <div class="col s12 m12 l12">
+               <div class="slide-portafolio owl-carousel owl-theme">
+                <a href="images/background2.jpg" class="img-slider responsive-img">
+                    <img rel="img_portafolio" style="max-width:350px !important" src="images/background2.jpg" alt="">
+                </a>
+                <a href="images/background2.jpg" class="img-slider">
+                    <img rel="img_portafolio" style="max-width:350px !important" src="images/background2.jpg" alt="">
+                </a>
+                <a href="images/background2.jpg" class="img-slider">
+                    <img rel="img_portafolio" style="max-width:350px !important" src="images/background2.jpg" alt="">
+                </a>
+                <a href="images/background2.jpg" class="img-slider">
+                    <img rel="img_portafolio" style="max-width:350px !important" src="images/background2.jpg" alt="">
+                </a>
+                <a href="images/background2.jpg" class="img-slider">
+                    <img rel="img_portafolio" style="max-width:350px !important" src="images/background2.jpg" alt="">
+                </a>
+                <a href="images/background2.jpg" class="img-slider">
+                    <img rel="img_portafolio" style="max-width:350px !important" src="images/background2.jpg" alt="">
+                </a>
+            </div>
+         </div>
+
+            <div class="row center">
+                <a href="" class="waves-effect waves-light btn fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="" style="border-radious: 25px;" >MÁS TRABAJOS</a>
+           </div>
+
+          <div class="col s12 m12 l12">
+            <p class="grey-text services">REDES SOCIALES - PÁGINAS WEB - APLICACIONES - EMAIL MKT - CRM & ERP - BRANDING </p>
+          </div>
+
               <div class="col l3 m3 s6" style="border-style: solid; border-width: 0.05px;">
                 <img src="images/logo-asi.png" alt="portafolio" class="responsive-img">
               </div>  
@@ -351,7 +388,82 @@
         app_id: "dyvnoakz"
       };
   </script>
+  <script>
+            $(document).ready(function(){
+            $("filterTwo").click(function(){
+                $("ver_estado").toggle(1000, function(){
+                    alert("The toggle() method is finished!");
+                });
+            });
+
+            $('.slide-portafolio').owlCarousel({
+                // loop: true,
+                // center: true,
+                autoWidth:true,
+                // autoHeight:true,
+                // animateOut: 'slideOutDown',
+                // animateIn: 'flipInX',
+                //autoplay: true,
+                items:1,
+                margin:10,
+                stagePadding:30,
+                smartSpeed:450,
+                // lazyLoad:true
+            });
+
+            $(".img-slider").colorbox({
+                rel:'img-slider',
+                current: "Imagen {current} de {total}",
+                height:"80%"
+            });
+
+
+        });
+
+
+        function resizeImage(selector) {
+            // Remove the previous values
+            // $(selector).css("width", "");
+            $(selector).css("height", "550");
+        
+            $(selector).each(function () {
+                // var maxWidth = 800; // Max width for the image
+                var maxHeight = 550;    // Max height for the image
+                var ratio = 0;  // Used for aspect ratio
+                var width = $(this).width();    // Current image width
+                var height = $(this).height();  // Current image height
+
+                if(height > width){
+                    $(this).css("width", "40%");
+                }
+        
+                // Check if current height is larger than max
+                // if (height > maxHeight) {
+                //     ratio = maxHeight / height; // get ratio for scaling image
+                //     $(this).css("height", maxHeight);   // Set new height
+                //     $(this).css("width", width * ratio);    // Scale width based on ratio
+                //     width = width * ratio;    // Reset width to match scaled image
+                // }
+                // Check if the current width is larger than the max
+                // else if (width > maxWidth) {
+                //     ratio = maxWidth / width;   // get ratio for scaling image
+                //     $(this).css("width", maxWidth); // Set new width
+                //     // $(this).css("height", height * ratio);  // Scale height based on ratio
+                //     height = height * ratio;    // Reset height to match scaled image
+                //     width = width * ratio;    // Reset width to match scaled image
+                // }
+            });
+        
+            // setting up the styles
+            $(selector).css("margin-left", "auto");
+            $(selector).css("margin-right", "auto");
+            $(selector).css("display", "block");
+            $(selector).parent().css("background-image", "none");
+        }
+    </script>
   <script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/dyvnoakz';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
+  <script type="text/javascript" src="js/owl-carousel/owl.carousel.min.js"></script>
+  <script type="text/javascript" src="js/jquery.colorbox-min.js"></script>
 
 
   </body>

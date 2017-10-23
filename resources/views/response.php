@@ -1,7 +1,7 @@
 <?php
-include_once '../../library/security/PayPhoneDecrypt.php';
-include_once './../library/models/DataSend.php';
-include_once '../../library/Configuration.php';
+include_once 'library/security/PayPhoneDecrypt.php';
+include_once 'library/models/DataSend.php';
+include_once 'library/Configuration.php';
 
 $config = ConfigurationManager::Instance();
 $config->ApiPath = 'http://localhost:8888/EncryptLibrary(Boton)/response.php';
