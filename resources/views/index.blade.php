@@ -225,6 +225,7 @@
 
             <div class="col s12 m12 l12">
                <div class="slide-portafolio owl-carousel owl-theme">
+<<<<<<< HEAD
 
                     <img rel="img_portafolio" style="max-width:350px !important" src="images/redes_sociales.png" alt="">
 
@@ -237,13 +238,38 @@
                     <img rel="img_portafolio" style="max-width:350px !important" src="images/ERPCRM.jpg" alt="">
 
                     <img rel="img_portafolio" style="max-width:350px !important" src="images/branding.jpg" alt="">
+=======
+                <a href="images/background2.jpg" class="img-slider responsive-img">
+                    <img rel="img_portafolio" style="max-width:350px !important" src="images/background2.jpg" alt="">
+                </a>
+                <a href="images/background2.jpg" class="img-slider">
+                    <img rel="img_portafolio" style="max-width:350px !important" src="images/background2.jpg" alt="">
+                </a>
+                <a href="images/background2.jpg" class="img-slider">
+                    <img rel="img_portafolio" style="max-width:350px !important" src="images/background2.jpg" alt="">
+                </a>
+                <a href="images/background2.jpg" class="img-slider">
+                    <img rel="img_portafolio" style="max-width:350px !important" src="images/background2.jpg" alt="">
+                </a>
+                <a href="images/background2.jpg" class="img-slider">
+                    <img rel="img_portafolio" style="max-width:350px !important" src="images/background2.jpg" alt="">
+                </a>
+                <a href="images/background2.jpg" class="img-slider">
+                    <img rel="img_portafolio" style="max-width:350px !important" src="images/background2.jpg" alt="">
+                </a>
+>>>>>>> b733d548544baeff93adac6eba551f3cf39b9061
             </div>
          </div>
 
             <div class="row center">
+<<<<<<< HEAD
                 <a href="#modal1" class="waves-effect waves-light btn modal-trigger fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="" style="border-radious: 25px;" >MÁS TRABAJOS</a>
            </div>
     
+=======
+                <a href="" class="waves-effect waves-light btn fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="" style="border-radious: 25px;" >MÁS TRABAJOS</a>
+           </div>
+>>>>>>> b733d548544baeff93adac6eba551f3cf39b9061
 
           <div class="col s12 m12 l12">
             <p class="grey-text services">REDES SOCIALES - PÁGINAS WEB - APLICACIONES - EMAIL MKT - CRM & ERP - BRANDING </p>
