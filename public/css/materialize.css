@@ -4726,9 +4726,9 @@ small {
 }
 
 .card .card-title {
-  font-size: 40px;
+  font-size: 38px;
   font-weight: 300;
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Helvetica', cursive;
 }
 
 .card .card-title.activator {
@@ -5667,7 +5667,7 @@ button.btn-floating {
   padding: 4px 6px;
   height: 56px;
   width: 100%;
-  text-align: right;
+ /* text-align: right;*/
 }
 
 .modal .modal-footer .btn, .modal .modal-footer .btn-large, .modal .modal-footer .btn-flat {

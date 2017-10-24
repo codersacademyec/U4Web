@@ -34,6 +34,11 @@ p {
   border-width: 0.5px;
 }
 
+.services{
+  font-size: 24px;
+  font-weight: bold;
+}
+
 .com{ 
     color: black;
     font-weight: bold;
@@ -58,6 +63,11 @@ p {
 			background-color:green;
     }
 
+  .mov{
+    padding-top: 200px;
+    font-weight: bolder;
+  }
+
 .button-collapse {
   color: #26a69a;
 }
@@ -68,13 +78,8 @@ p {
   height: auto;
   color: rgba(255,255,255,.9);
 }
-  .parallax-container .section {
+.parallax-container .section {
     width: 100%;
-  }
-
-.mov{
-  padding-top: 200px;
-  font-weight: bolder;
 }
 
 .strong {
@@ -96,6 +101,31 @@ p {
     top: 0;
   }
 }
+
+  .slide img{
+      height: 170px;
+      width: 240px;
+  }
+
+  .owl-item.loading{
+      min-height: 150px;
+      background: url("images/loading.gif") no-repeat center center;
+  }
+
+  .loading {   
+      background: url('img/preloader.gif') no-repeat center center;  
+  }
+
+  @media screen and (min-width:640px) {
+      .picture img {
+          max-height: 300px;
+      }
+  }
+  @media screen and (max-width:640px) {
+      .picture img {
+          max-height: 100%;
+          max-width: 100%;
+      }
 
 .icon-block {
   padding: 0 15px;
