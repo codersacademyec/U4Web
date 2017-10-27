@@ -242,7 +242,7 @@
             </div>
          </div>
 
- <!--><-->  <div class="row center">
+  <div class="row center">
                 <a href="#galeria" class="waves-effect waves-light btn modal-trigger fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="" style="border-radious: 25px;" >MÁS TRABAJOS</a>
            </div>
     
@@ -328,7 +328,7 @@
   </div>
 
      <!-- GALERIA -->
- <!--><-->    <div id="galeria" class="modal bottom-sheet"> 
+ <div id="galeria" class="modal bottom-sheet"> 
       <div class="modal-content">
         <h4>Titulo</h4>
         <p>Cuerpo</p>
@@ -356,7 +356,7 @@
     </div>
 
       <!-- REGISTRO -->
- <!--><-->  <div id="register" class="modal">
+<div id="register" class="modal">
     <div class="modal-content">
       
        <div class="row" v-if="acceso == 1">
@@ -427,7 +427,6 @@
 
 
         </div>
-<!--><-->
       </div>
     </div>
     <div class="footer-copyright">
