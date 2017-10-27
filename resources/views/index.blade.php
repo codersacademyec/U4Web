@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="css/animate.css" type="text/css">
   <link href="js/owl-carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="js/owl-carousel/assets/owl.theme.default.min.css" rel="stylesheet">
-  <script type="text/javascript" src="js/vue.js"></script>>
+  <script type="text/javascript" src="js/vue.js"></script>
 </head>
 </head>
 <body>
