@@ -1,15 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+  </head>
+  <body>
 <?php
 include_once 'library/security/PayPhoneDecrypt.php';
 include_once 'library/models/DataSend.php';
 include_once 'library/Configuration.php';
 
 $config = ConfigurationManager::Instance();
-$config->ApiPath = 'http://localhost:8888/EncryptLibrary(Boton)/response.php';
-$config->Token = 'e8ebFhgY6wsi5WlylLbt9ILQOZjrwiX2bsB5sP3i7HZMP2WvuGNSjm_3Eo74FEj2F9ALNjY2lg67CIj-YNe1ajSQvdUo21jmFNablClOxGEIXfY7IuBnVvQMCBnQQDB7at3JrsZ3zCN4trIGJgJ55-S_zfQZ0GVR7uiV6u7JKtHDWLr98-DoH0V0HtuHuKcO6qoxDsHP3ZIOTDjJXWBXlWiS101F7KyS3NI5R31qjgYLw5F-dbzI8R_xQltmTkThBSQsn0_GJc_a7Sc3ZGrtISDDaCeqW_tumJXYQoxcAKbBMAvjtmpINoIPAUzJ5NYbFezh9dfC6g1C39o3gpBUMc91WcewECdZaHnkxlnRe7bZ0ugNm0SX-fXmnx2QWU5SFPxiWq4tcPAweg-2IVVUWlNZ0CAVMk2Ip78lqI6wSsCerirdApNCWRLXGvzFO34yUZJpy3wSUlwGFmCWkyqoiQ';
-$config->ApplicationId = 'a75f6c1b-85c0-4144-91d9-717a3d5f67c7';
-$config->ApplicationPublicKey = '<RSAKeyValue><Modulus>uLaPjovIkHmdaobVXMoozWYRe5xeiSMT1CF2v2Pb4BwZzLiRBSzp7EO72Vt68SsIgGbrzTaO9jRMdoHQilWcB2EjYhRr7dSDdFjsArCLh8iwszq+dNdZBlncT5kFikHQey8mAePSUYmMMiKoS+6Uy4cDZjcowdIF+ZOCsMeq/1U=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue>';
-$config->PrivateKey = '<RSAKeyValue><Modulus>xStUDkihNv8cAEVjIGWvOth4BwgcfALU06O7B3m22fryqBtw+DU/lMLfbagR3JyyHhcKiKkQ+tmNRgy47Rk/2dFAwUmOP7I3jB45J+KkyPb8KKIybaf+tz46rKLS6U3wtcic9OwPQMwCfoMZf5GPSbCcIm/mJRA+dCetOAGndo0=</Modulus><Exponent>AQAB</Exponent><P>5Y9kfs1pZPpSvW3Dib9CBBBvNVJpc8ho3Pc4piACFnz41zO7+70NNoPnvp5CSBhaWA+0KyYcBRkezNmQiSU1eQ==</P><Q>2+DjEYmGWBcm8T4JruLBFXXHAlra483Efjms4+pvmT1D9CS5TQfAQ41JnmbJOon34d/lTyxrqnO5rXbVNzvotQ==</Q><DP>Jd5Iqq5B85ljqsH/nqqBPmBjp/0nTiVCPyk9HBJtpb4J4p4zJWzjUBnkUcqTjocN6Db29qM7vg+NyCcfs7ACqQ==</DP><DQ>LawH3oOveSrN9vxI7J/DNZ7ySIXww7LhJsr6I5l1tuHn9JWQO/TpNd7qNNHq6JLx/2QPcKOsdYp2PhbZ8RArpQ==</DQ><InverseQ>P/cJ8ihwk3KT3acJRhnuLbuztM2EfsjrpEJRBvD8cNu/GCS+m4PRrQTLejyWOqnVbTF9w/X6COaMfiq/tp5amA==</InverseQ><D>HM5Je8O/L+iCCAUbKBzLBssg8BAOj0yfmOMDHGK7JOodoRNPRCgNZ7e3yk7De0p2WGCP5KrkpO17TxhlPRiTBAc9c0cszlT30Lo0+eG8QXmrNXU8Cq7pcvm1UD3t7dHyzebcptQtuJ7oZNfTJaiXlMjlCKZuQFAj6qVfmgU42Ik=</D></RSAKeyValue>';
-
+$config->ApiPath = 'http://35.163.77.209/response';
+$config->Token = 'o7fcqijsueWG4e6_iCeqK9ZT8M7g3NvyGdDADnr-3BGQhguJy6LG6iLe8d9S-LaKPKHBOx8wAXjBCKN1cL4fKZlRhT7ckOY_C1dGumZArSNDbFLfPwCgyMXBg9kbMgRE4QhPyta1W6eOTOSglv6_o204ao2P1KPMRgaKSgzAVI9yuX-vaPcbyD2IyMyBI1OC52kyqkMPcoXkZ-ilHAtgZDIAA0K6S86veYN-Pq7Cm4lEktBHyCeLCCADrxKjgzi75ajhlIs55Lu-xcJ4oW5LnhJcASvVaiNTnjhO4shCGqK_EbIvGloIRVUbXn2hA8-W2yqGrX52mKeniV3mz0NOf8SQ7kf97VpxK-dvqL1W1-M0KQwkqzt4AEE3EbS1iPsjAWnHK4Tdzg9rieqxe4spaSSkVIMsUyBFcKVqL-TkvblqM2C9qvllUkH8a-VCG_cppz18P-lrPIuZYISp_8EMlg';
+$config->ApplicationPublicKey = '<RSAKeyValue><Modulus>tp+ciq7wLovm2HIk16OUCwp/nBsKZD30co/Sf3VDEtPvFQ/8ZBqm9joh70KEPbS5VZsIDRj1huwjN6zmqHt5JcT53+KxhMLKa7QAJn0zyTW7J8MmH0VlelL3OIlfM9YN4489j255UHb1J00D2uqzEE9DQxTNBv79PPSI3+AI5fc=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue>';
+$config->PrivateKey = '<RSAKeyValue><Modulus>rrtw1Cemk4x1Zph1ZdT2OijfljRm786eJCtn/Oy0q+K/9laBdEoPAzrlzJVeJiTNDGGIZZ8XJZCEwlBNESAwdbkxyrfC7pgg0JtiMBt798v7VvV3tmuoJFIfWrLDs3/W7xi/avaBOFeysgkHWIRZGG5Dlm9gkCn0iCiht+b6Sa0=</Modulus><Exponent>AQAB</Exponent><P>2fns4L/tLq4RTFuRESDUTUcGFfGFuE78wNjvzmb12OKNPP3cJab2z7ZyN5mLIZ8Xm8tu8EoscRT9GGyeN/qodw==</P><Q>zTZh+ZX7fYtC9fTNw9hQRClkC6KsigjprTV4w/p8j+I5eg6ydokbDaUhXAyE1x7NYw8qbBYflrJUfFT7UVYL+w==</Q><DP>n7iowE8iZvAZsM/vzpM1vaJrbSzbBSCryEut/JopT1FCmQyTgeuEMtPHgcI61toSnJBGrEBNrFbq1jjQ/sfnJQ==</DP><DQ>FDGCyJ2ipsL6btuNF/WESIDOMHrsgZTI8dtuK9LNSRdY0pL5qsJpIBmcw8MTm1uTmGjYotQ2fYzE1YtDQ8i02w==</DQ><InverseQ>XbZ/nKzE5lxDouAyJQDHlRICSuN4/OeXIqcexWVZXeMPR1dire+xAFahk7+ndJqiKlHxnDbgQMx8G0NpgPsNQw==</InverseQ><D>Az2fvJeVq9Plk4cNWlumS3LZnsAPDrCO103kylibizqT49473WvINn+fpnk4u01gbjPa40OdmslA5Re3LjOiImz5ERKMxJjY/MHsJi0AHSnPTNArPpbDkbpKpCr8l4d1g0E4n4SfT67iMcLskHtiYARXdqYlEZ5upz374KRNEmM=</D></RSAKeyValue>';
 
 
 $privateKey = $config->PrivateKey;
@@ -17,6 +27,8 @@ $privateKey = $config->PrivateKey;
 $decrypt = new PayPhoneDecrypt($privateKey);
 
 $response = new DataSend();
+if( isset($_POST['IV']) && isset($_POST['SessionKey']) && isset($_POST['XmlReq']) )
+{
 $response->IV = $_POST['IV'];
 $response->SessionKey = $_POST['SessionKey'];
 $response->XmlReq = $_POST['XmlReq'];
@@ -24,8 +36,48 @@ $response->XmlReq = $_POST['XmlReq'];
 //Desencripta los datos que se reciben en la url de respuesta
 $decryptedData = $decrypt->Execute($response);
 
-echo 'Telefono: '.$decryptedData->PhoneNumber.'<br/>';
-echo 'Menssaje: '.$decryptedData->Message.'<br/>';
-echo 'Codigo: '.$decryptedData->AuthorizationCode.'<br/>';
+#echo 'Telefono: '.$decryptedData->PhoneNumber.'<br/>';
+#echo 'Menssaje: '.$decryptedData->Message.'<br/>';
+#echo 'Codigo: '.$decryptedData->AuthorizationCode.'<br/>';
+echo '
+<div class="row">
+        <div class="col-lg-6 col-lg-offset-3 text-center">
+                <div class="card text-center" style="width: 45rem; background-color: #fafafa; border-color: #333;">
+                        <img class="card-img-top" src="images/logo_centro.png" alt="Card image cap">
+                        <div class="card-block">
+                                <div class="alert alert-success text-center">
+                                <strong>Perfecto</strong>  Transacción exitosa.
+                        </div>
+                                <p class="card-text text-center">Estimado cliente su transacción fue completada con exito.</p>
+				<p class="card-text text-center"> Mensaje: '.$decryptedData->Message.'.</p>
+                                <p class="card-text text-center"> Codigo: '.$decryptedData->AuthorizationCode.'.</p>
+                                <p class="card-text text-center"> Codigo: '.$decryptedData->PhoneNumber.'.</p>
+                                <a href="http://35.163.77.209" class="btn btn-primary">Regresar</a>
+                        </div>
+                </div>
+        </div>
+</div>
+';
 
+
+}else{
+echo '
+<div class="row">
+	<div class="col-lg-6 col-lg-offset-3 text-center">
+ 		<div class="card text-center" style="width: 45rem; background-color: #fafafa; border-color: #333;">
+  			<img class="card-img-top" src="images/logo_centro.png" alt="Card image cap">
+  			<div class="card-block">
+    				<div class="alert alert-danger text-center">
+      				<strong>Error!</strong>  Transacción Cancelada.
+    			</div>    
+    				<p class="card-text text-center">Estimado cliente su transacción no pudo ser completada.</p>
+    				<a href="http://35.163.77.209" class="btn btn-primary">Regresar</a>
+  			</div>
+ 		</div>
+	</div>
+</div>
+';
+}
 ?>
+  </body>
+</html> 

@@ -22,6 +22,9 @@ Route::get('/', function () {
 Route::get('/response', function () {
     return view('response');
 });
+Route::post('/response', function () {
+    return view('response');
+});
 
 Route::get('/index', function () {
 	    return view('index');

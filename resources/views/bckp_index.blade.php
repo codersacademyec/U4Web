@@ -13,8 +13,6 @@
   <link rel="stylesheet" href="css/animate.css" type="text/css">
   <link href="js/owl-carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="js/owl-carousel/assets/owl.theme.default.min.css" rel="stylesheet">
-  <script type="text/javascript" src="js/vue.js"></script>>
-</head>
 </head>
 <body>
   <nav class="transparent" role="navigation" id="top">
@@ -155,7 +153,7 @@
                     
                   </div>
                   <div class="card-action">
-                  <a href="#register" class="waves-effect waves-light btn modal-trigger fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#4CAF50'">Pagar $200 usd + iva con PayPhone</a>
+                  <a href="https:&#x2F;&#x2F;sandboxpayment.payphone.com.ec&#x2F;/Pay/20000/ac0fdc7a-fba9-4580-9985-002902d8d92c/es/" class="waves-effect waves-light btn fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#4CAF50'">Pagar $200 usd + iva con PayPhone</a>
                  </div>
               </div>
                </div>
@@ -178,7 +176,7 @@
                     <h5>Informe de rendimiento mensual</h5>
                   </div>
                   <div class="card-action">
-                     <a href="#register" class="waves-effect waves-light btn modal-trigger fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#4CAF50'">Pagar $400 usd + iva con PayPhone</a>
+                     <a href="https:&#x2F;&#x2F;payment.payphonetodoesposible.com&#x2F;/Pay/40000/6190477d-a58c-4a97-86ce-73cfe61d5962/es/" class="waves-effect waves-light btn fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#4CAF50'">Pagar $400 usd + iva con PayPhone</a>
                  </div>
               </div>
                </div>
@@ -208,7 +206,7 @@
                     </p>
                   </div>
                   <div class="card-action">
-                   <a href="#register" class="waves-effect waves-light btn modal-trigger fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#4CAF50'">Pagar $600 usd + iva con PayPhone</a>
+                     <a href="https:&#x2F;&#x2F;payment.payphonetodoesposible.com&#x2F;/Pay/60000/6190477d-a58c-4a97-86ce-73cfe61d5962/es/" class="waves-effect waves-light btn" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#8bc34a'">Pagar $600 usd + iva con PayPhone</a>
                  </div>
               </div>
             </div>
@@ -242,8 +240,8 @@
             </div>
          </div>
 
- <!--><-->  <div class="row center">
-                <a href="#galeria" class="waves-effect waves-light btn modal-trigger fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="" style="border-radious: 25px;" >MÁS TRABAJOS</a>
+            <div class="row center">
+                <a href="#modal1" class="waves-effect waves-light btn modal-trigger fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="" style="border-radious: 25px;" >MÁS TRABAJOS</a>
            </div>
     
 
@@ -327,8 +325,8 @@
   </div>
   </div>
 
-     <!-- GALERIA -->
- <!--><-->    <div id="galeria" class="modal bottom-sheet"> 
+     <!-- Modal Structure -->
+    <div id="modal1" class="modal bottom-sheet">
       <div class="modal-content">
         <h4>Titulo</h4>
         <p>Cuerpo</p>
@@ -350,66 +348,11 @@
         </div>
       </div>
      </div>
+
       <div class="modal-footer">
         <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
       </div>
     </div>
-
-      <!-- REGISTRO -->
- <!--><-->  <div id="register" class="modal">
-    <div class="modal-content">
-      
-       <div class="row" v-if="acceso == 1">
-        <p class="blue-text">Primero debes proveer cierta informacion</p>
-         <div class="card">
-            <div class="card-content">
-                 <form action="/" method="POST" @submit.prevent="send">
-                 {{ csrf_field() }}
-              <div class="input-field col s6">
-                  <input id="name" type="text" class="validate" v-model="nombre"/>
-                  <label for="name">Nombre y apellido</label>
-              </div>
-               <div class="input-field col s6">
-                  <input id="cedula" type="text" class="validate" name="cedula"/>
-                  <label for="cedula">Cedula</label>
-              </div>
-              <div class="input-field col s6">
-                <input id="email" type="email" class="validate" name="email"/>
-                <label for="email">Email</label>
-              </div>
-              <div class="input-field col s6">
-                  <input id="direccion" type="text" class="validate" name="direccion"/>
-                  <label for="direccion">Direccion</label>
-              </div>
-              <div class="col s6 left">
-                  <button class="btn waves-effect waves-light" type="submit" >Registrar</button>
-              </div>
-                <a href="#!" class="modal-action modal-close btn waves-effect waves-light">Cerrar</a>
-              
-          </form>
-            </div>
-          </div>        
-        </div>
-        <div class="row" v-if="acceso == 2">
-        <p class="blue-text">Ahora si puedes cancelar cualquiera de nuestros servicios</p>
-         <div class="card">
-            <div class="card-content">
-             <div class="input-field col s12 center">
-               <a href="https:&#x2F;&#x2F;sandboxpayment.payphone.com.ec&#x2F;/Pay/20000/ac0fdc7a-fba9-4580-9985-002902d8d92c/es/" class="waves-effect waves-light btn fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#4CAF50'">Pagar $200 usd + iva con PayPhone</a>
-             </div>
-             <div class="input-field col s12 center">
-               <a href="https:&#x2F;&#x2F;sandboxpayment.payphone.com.ec&#x2F;/Pay/20000/ac0fdc7a-fba9-4580-9985-002902d8d92c/es/" class="waves-effect waves-light btn fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#4CAF50'">Pagar $400 usd + iva con PayPhone</a>
-             </div>
-             <div class="input-field col s12 center">
-                 <a href="https:&#x2F;&#x2F;sandboxpayment.payphone.com.ec&#x2F;/Pay/20000/ac0fdc7a-fba9-4580-9985-002902d8d92c/es/" class="waves-effect waves-light btn fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#4CAF50'">Pagar $600 usd + iva con PayPhone</a>
-                </div>
-             </div>
-             <a href="#!" class="modal-action modal-close btn waves-effect waves-light">Cerrar</a>
-            </div>        
-        </div>
-      </div>        
-    </div>
-  </div>
            
 
   <footer class="page-footer teal" id="footer">
@@ -427,7 +370,24 @@
 
 
         </div>
-<!--><-->
+        <!--div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div-->
       </div>
     </div>
     <div class="footer-copyright">
@@ -444,20 +404,6 @@
   <script src="js/init.js"></script>
    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script>
-      new Vue({
-        el: "#register",
-        data: {
-          nombre : "",
-          acceso : 1
-        },
-        methods: {
-          send: function(){
-            alert("Tus datos han sido registrados, puedes proceder con el pago");
-            this.acceso=2;
-          }
-        }
-      });
-
       window.intercomSettings = {
         app_id: "dyvnoakz"
       };
