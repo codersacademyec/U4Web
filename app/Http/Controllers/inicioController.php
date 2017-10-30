@@ -34,4 +34,10 @@ class inicioController extends Controller
     //dd($request->all());
     }
 
+    public function register(Request $request){
+
+        dd($request->all());
+
+    }
+
 }

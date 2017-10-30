@@ -16,7 +16,7 @@
   <script type="text/javascript" src="js/vue.js"></script>
 </head>
 </head>
-<body>
+<body id="filter">
   <nav class="transparent" role="navigation" id="top">
     <div class="nav-wrapper container">
       <a id="logo-container" href="#" class="brand-logo"><img src="images/logo-empresa-pequeno.png" alt="logo" class="responsive-img img-logo"></a>
@@ -155,7 +155,7 @@
                     
                   </div>
                   <div class="card-action">
-                  <a href="#register" class="waves-effect waves-light btn modal-trigger fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#4CAF50'">Pagar $200 usd + iva con PayPhone</a>
+                  <a href="#register" class="waves-effect waves-light btn modal-trigger fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#4CAF50'">$200 con PayPhone</a>
                  </div>
               </div>
                </div>
@@ -178,7 +178,7 @@
                     <h5>Informe de rendimiento mensual</h5>
                   </div>
                   <div class="card-action">
-                     <a href="#register" class="waves-effect waves-light btn modal-trigger fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#4CAF50'">Pagar $400 usd + iva con PayPhone</a>
+                     <a href="#register" class="waves-effect waves-light btn modal-trigger fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#4CAF50'">$400 con PayPhone</a>
                  </div>
               </div>
                </div>
@@ -200,7 +200,7 @@
                     <p>Diseños básicos de cortesía</p>
                     <h5>Un video promocional de 30 a 45 seg</h5>
                     <p>(Fotografías realizadas por nosotros)</p>
-                    <h5>Creacion ca campaña para envio de e-mail marketing a base de 1000 clientes</h5>
+                    <h5>Creacion de campaña para envio de e-mail marketing a base de 1000 clientes</h5>
                     <p>(Cliente debe proporcionar el concepto de lo que desea promocionar)</p>
                     <h5>Informe de rendimiento mensual</h5>
                     <p>Dos videos promocionales de 30 a 45 seg. (Fotografias realizadas por nosotros)
@@ -208,7 +208,7 @@
                     </p>
                   </div>
                   <div class="card-action">
-                   <a href="#register" class="waves-effect waves-light btn modal-trigger fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#4CAF50'">Pagar $600 usd + iva con PayPhone</a>
+                   <a href="#register" class="waves-effect waves-light btn modal-trigger fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#4CAF50'">$600 con PayPhone</a>
                  </div>
               </div>
             </div>
@@ -366,19 +366,19 @@
                  <form action="/" method="POST" @submit.prevent="send">
                  {{ csrf_field() }}
               <div class="input-field col s6">
-                  <input id="name" type="text" class="validate" v-model="nombre"/>
+                  <input id="name" type="text" class="validate" name="name"  v-model="nombre" required/>
                   <label for="name">Nombre y apellido</label>
               </div>
                <div class="input-field col s6">
-                  <input id="cedula" type="text" class="validate" name="cedula"/>
+                  <input id="cedula" type="text" class="validate" name="cedula" v-model="cedula" required/>
                   <label for="cedula">Cedula</label>
               </div>
               <div class="input-field col s6">
-                <input id="email" type="email" class="validate" name="email"/>
+                <input id="email" type="email" class="validate" name="email" v-model="email" required/>
                 <label for="email">Email</label>
               </div>
               <div class="input-field col s6">
-                  <input id="direccion" type="text" class="validate" name="direccion"/>
+                  <input id="direccion" type="text" class="validate" name="direccion" v-model="direccion" required/>
                   <label for="direccion">Direccion</label>
               </div>
               <div class="col s6 left">
@@ -390,19 +390,27 @@
             </div>
           </div>        
         </div>
-        <div class="row" v-if="acceso == 2">
+        <div class="row" v-if="acceso > 1 && acceso < 5">
         <p class="blue-text">Ahora si puedes cancelar cualquiera de nuestros servicios</p>
          <div class="card">
             <div class="card-content">
-             <div class="input-field col s12 center">
-               <a href="https:&#x2F;&#x2F;sandboxpayment.payphone.com.ec&#x2F;/Pay/20000/ac0fdc7a-fba9-4580-9985-002902d8d92c/es/" class="waves-effect waves-light btn fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#4CAF50'">Pagar $200 usd + iva con PayPhone</a>
+             <div class="input-field col s12 center" v-if="p_200 == 0">
+               <a href="https:&#x2F;&#x2F;sandboxpayment.payphone.com.ec&#x2F;/Pay/20000/ac0fdc7a-fba9-4580-9985-002902d8d92c/es/" class="waves-effect waves-light btn fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#4CAF50'" @click="pay_200" target="_blank">Pagar $200 usd + iva con PayPhone</a>
              </div>
-             <div class="input-field col s12 center">
-               <a href="https:&#x2F;&#x2F;sandboxpayment.payphone.com.ec&#x2F;/Pay/20000/ac0fdc7a-fba9-4580-9985-002902d8d92c/es/" class="waves-effect waves-light btn fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#4CAF50'">Pagar $400 usd + iva con PayPhone</a>
+             <div class="input-field col s12 center" v-if="p_400 == 0">
+               <a href="https:&#x2F;&#x2F;sandboxpayment.payphone.com.ec&#x2F;/Pay/20000/ac0fdc7a-fba9-4580-9985-002902d8d92c/es/" class="waves-effect waves-light btn fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#4CAF50'" @click="pay_400" target="_blank">Pagar $400 usd + iva con PayPhone</a>
              </div>
-             <div class="input-field col s12 center">
-                 <a href="https:&#x2F;&#x2F;sandboxpayment.payphone.com.ec&#x2F;/Pay/20000/ac0fdc7a-fba9-4580-9985-002902d8d92c/es/" class="waves-effect waves-light btn fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#4CAF50'">Pagar $600 usd + iva con PayPhone</a>
+             <div class="input-field col s12 center" v-if="p_600 == 0">
+                 <a href="https:&#x2F;&#x2F;sandboxpayment.payphone.com.ec&#x2F;/Pay/20000/ac0fdc7a-fba9-4580-9985-002902d8d92c/es/" class="waves-effect waves-light btn fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#4CAF50'" @click="pay_600" target="_blank">Pagar $600 usd + iva con PayPhone</a>
                 </div>
+             </div>
+             <a href="#!" class="modal-action modal-close btn waves-effect waves-light">Cerrar</a>
+            </div>        
+        </div>
+         <div class="row" v-if="acceso == 5">
+         <div class="card">
+            <div class="card-content">
+                <h5 class="blue-text">Gracias por utilizar nuestros servicios</h5>
              </div>
              <a href="#!" class="modal-action modal-close btn waves-effect waves-light">Cerrar</a>
             </div>        
@@ -447,13 +455,35 @@
         el: "#register",
         data: {
           nombre : "",
-          acceso : 1
+          cedula : "",
+          email : "",
+          direccion : "",
+          acceso : 1,
+          p_200 : 0,
+          p_400 : 0,
+          p_600 : 0
         },
         methods: {
           send: function(){
-            alert("Tus datos han sido registrados, puedes proceder con el pago");
-            this.acceso=2;
-          }
+             /*this.$http.get('/register', data).then(function(){*/
+                  alert("Tus datos han sido registrados, puedes proceder con el pago");
+                  this.acceso=2;
+            /*  }, function(){
+                 alert('Ha ocurrido un error inesperado!');
+              });*/
+          },
+          pay_200: function(){
+            this.p_200=1;
+            this.acceso++;
+          },
+          pay_400: function(){
+            this.p_400=1;
+            this.acceso++;
+          },
+          pay_600: function(){
+            this.p_600=1;
+            this.acceso++;
+          },
         }
       });
 

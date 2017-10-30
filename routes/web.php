@@ -31,3 +31,4 @@ Route::get('/index', function () {
 	})->name('index');
 
 Route::post('/enviarmensaje', 'inicioController@mensaje' );
+Route::get('/register', 'inicioController@register');
