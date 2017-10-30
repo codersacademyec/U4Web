@@ -10,6 +10,8 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
   </head>
   <body>
+
+  
 <?php
 include_once 'library/security/PayPhoneDecrypt.php';
 include_once 'library/models/DataSend.php';
@@ -79,5 +81,10 @@ echo '
 ';
 }
 ?>
+<div id="data_index" style="margin-top:55px;"></div>
   </body>
+  <script type="text/javascript">
+    /*Solo a modo de verificacion*/
+     document.getElementById("data_index").innerHTML = localStorage.getItem("name")+" "+localStorage.getItem("cedula")+" "+localStorage.getItem("email")+" "+localStorage.getItem("phone")+" "+localStorage.getItem("direccion");
+  </script>
 </html> 

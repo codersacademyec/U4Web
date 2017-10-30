@@ -363,7 +363,7 @@
         <p class="blue-text">Primero debes proveer cierta informacion</p>
          <div class="card">
             <div class="card-content">
-                 <form action="/" method="POST" @submit.prevent="send">
+              <form action="/response" method="POST" @submit.prevent="send" id="registro">
                  {{ csrf_field() }}
               <div class="input-field col s6">
                   <input id="name" type="text" class="validate" name="name"  v-model="nombre" required/>
@@ -378,6 +378,11 @@
                 <label for="email">Email</label>
               </div>
               <div class="input-field col s6">
+                <!--i class="material-icons prefix">phone</i-->
+                <input id="phone" type="tel" class="validate" name="phone" v-model="phone">
+                <label for="phone">Teléfono</label>
+              </div>
+              <div class="input-field col s12">
                   <input id="direccion" type="text" class="validate" name="direccion" v-model="direccion" required/>
                   <label for="direccion">Direccion</label>
               </div>
@@ -458,6 +463,7 @@
           cedula : "",
           email : "",
           direccion : "",
+          phone: "",
           acceso : 1,
           p_200 : 0,
           p_400 : 0,
@@ -465,12 +471,32 @@
         },
         methods: {
           send: function(){
-             /*this.$http.get('/register', data).then(function(){*/
-                  alert("Tus datos han sido registrados, puedes proceder con el pago");
-                  this.acceso=2;
-            /*  }, function(){
-                 alert('Ha ocurrido un error inesperado!');
-              });*/
+            if (typeof(Storage) !== "undefined") {
+                    // Store
+                localStorage.setItem("name", this.nombre);
+                localStorage.setItem("cedula", this.cedula);
+                localStorage.setItem("email", this.email);
+                localStorage.setItem("phone", this.phone);
+                localStorage.setItem("direccion", this.direccion);
+                alert("Tus datos han sido registrados, puedes proceder con el pago");
+                 this.acceso=2;
+            } else {
+              alert("Sorry, your browser does not support Web Storage...");
+            }
+
+            /*File to file*/
+             /*   $.ajax({
+                  url: $(registro).attr('action'),
+                  type: $(registro).attr('method'),
+                  data: $(registro).serialize(),
+                  dataType: 'html',
+                  success: function(result){
+                    alert("Tus datos han sido registrados, puedes proceder con el pago");
+                  },
+                  error: function(){
+                  console.log('Error');
+                  }
+                });   */
           },
           pay_200: function(){
             this.p_200=1;
