@@ -16,7 +16,7 @@
   <script type="text/javascript" src="js/vue.js"></script>
 </head>
 </head>
-<body id="filter">
+<body>
   <nav class="transparent" role="navigation" id="top">
     <div class="nav-wrapper container">
       <a id="logo-container" href="#" class="brand-logo"><img src="images/logo-empresa-pequeno.png" alt="logo" class="responsive-img img-logo"></a>
@@ -133,6 +133,9 @@
     <div class="parallax"><img src="images/background2.jpg" alt="Unsplashed background img 2"></div>
   </div>
 
+
+<div id="use">
+
  <div class="container">
     <div class="section">
       <div class="row">
@@ -155,7 +158,7 @@
                     
                   </div>
                   <div class="card-action">
-                  <a href="#register" class="waves-effect waves-light btn modal-trigger fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#4CAF50'">$200 con PayPhone</a>
+                  <a href="#register" class="waves-effect waves-light btn modal-trigger fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#4CAF50'" @click="pay_200" >Pagar 200$ usd + iva</a>
                  </div>
               </div>
                </div>
@@ -178,7 +181,7 @@
                     <h5>Informe de rendimiento mensual</h5>
                   </div>
                   <div class="card-action">
-                     <a href="#register" class="waves-effect waves-light btn modal-trigger fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#4CAF50'">$400 con PayPhone</a>
+                     <a href="#register" class="waves-effect waves-light btn modal-trigger fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#4CAF50'" @click="pay_400">Pagar $400 usd + iva</a>
                  </div>
               </div>
                </div>
@@ -208,7 +211,7 @@
                     </p>
                   </div>
                   <div class="card-action">
-                   <a href="#register" class="waves-effect waves-light btn modal-trigger fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#4CAF50'">$600 con PayPhone</a>
+                   <a href="#register" class="waves-effect waves-light btn modal-trigger fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#4CAF50'" @click="pay_600">Pagar $600 usd + iva</a>
                  </div>
               </div>
             </div>
@@ -242,7 +245,7 @@
             </div>
          </div>
 
-  <div class="row center">
+            <div class="row center">
                 <a href="#galeria" class="waves-effect waves-light btn modal-trigger fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="" style="border-radious: 25px;" >MÁS TRABAJOS</a>
            </div>
     
@@ -325,7 +328,6 @@
       </div>
     </div>
   </div>
-  </div>
 
      <!-- GALERIA -->
  <div id="galeria" class="modal bottom-sheet"> 
@@ -399,16 +401,10 @@
         <p class="blue-text">Ahora si puedes cancelar cualquiera de nuestros servicios</p>
          <div class="card">
             <div class="card-content">
-             <div class="input-field col s12 center" v-if="p_200 == 0">
-               <a href="https:&#x2F;&#x2F;sandboxpayment.payphone.com.ec&#x2F;/Pay/20000/ac0fdc7a-fba9-4580-9985-002902d8d92c/es/" class="waves-effect waves-light btn fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#4CAF50'" @click="pay_200" target="_blank">Pagar $200 usd + iva con PayPhone</a>
+             <div class="input-field col s12 center">
+               <a v-bind:href="{{ 'url' }}" target="_blank"><img src="images/payphone.png" class="responsive-img"></a>
              </div>
-             <div class="input-field col s12 center" v-if="p_400 == 0">
-               <a href="https:&#x2F;&#x2F;sandboxpayment.payphone.com.ec&#x2F;/Pay/20000/ac0fdc7a-fba9-4580-9985-002902d8d92c/es/" class="waves-effect waves-light btn fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#4CAF50'" @click="pay_400" target="_blank">Pagar $400 usd + iva con PayPhone</a>
-             </div>
-             <div class="input-field col s12 center" v-if="p_600 == 0">
-                 <a href="https:&#x2F;&#x2F;sandboxpayment.payphone.com.ec&#x2F;/Pay/20000/ac0fdc7a-fba9-4580-9985-002902d8d92c/es/" class="waves-effect waves-light btn fbutton" onmouseover="this.style.backgroundColor='#8bc34a'" onmouseout="this.style.backgroundColor='#4CAF50'" @click="pay_600" target="_blank">Pagar $600 usd + iva con PayPhone</a>
-                </div>
-             </div>
+            </div>
              <a href="#!" class="modal-action modal-close btn waves-effect waves-light">Cerrar</a>
             </div>        
         </div>
@@ -422,8 +418,8 @@
         </div>
       </div>        
     </div>
-  </div>
            
+</div>
 
   <footer class="page-footer teal" id="footer">
     <div class="container center">
@@ -457,7 +453,7 @@
    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script>
       new Vue({
-        el: "#register",
+        el: "#use",
         data: {
           nombre : "",
           cedula : "",
@@ -467,7 +463,9 @@
           acceso : 1,
           p_200 : 0,
           p_400 : 0,
-          p_600 : 0
+          p_600 : 0,
+          pago: 0,
+          url : ""
         },
         methods: {
           send: function(){
@@ -499,16 +497,16 @@
                 });   */
           },
           pay_200: function(){
-            this.p_200=1;
-            this.acceso++;
+            this.pago=20000;
+            this.url="https:sandboxpayment.payphone.com.ec/Pay/"+this.pago+"/ac0fdc7a-fba9-4580-9985-002902d8d92c/es/"
           },
           pay_400: function(){
-            this.p_400=1;
-            this.acceso++;
+            this.pago=40000;
+            this.url="https:sandboxpayment.payphone.com.ec/Pay/"+this.pago+"/ac0fdc7a-fba9-4580-9985-002902d8d92c/es/"
           },
           pay_600: function(){
-            this.p_600=1;
-            this.acceso++;
+            this.pago=60000;
+            this.url="https:sandboxpayment.payphone.com.ec/Pay/"+this.pago+"/ac0fdc7a-fba9-4580-9985-002902d8d92c/es/"
           },
         }
       });
