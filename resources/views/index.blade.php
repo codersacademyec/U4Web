@@ -68,7 +68,7 @@
         <div class="caption right-align">
           <h3>Inscribete</h3>
           <h5 class="light grey-text text-lighten-3">Curso: Elaboracion de plan de proyectos</h5>
-          <a href="#info" class="btn waves-effect white black-text darken-text-2 modal-trigger">Registrarme</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSd2u7gNW_gtJCb8xgHOU-RY9wsYGb0V7-r9GguM3aWFKz8TgQ/viewform" class="btn waves-effect white black-text darken-text-2">Registrarme</a>
         </div>
       </li>
     </ul>
@@ -386,20 +386,24 @@
                  {{ csrf_field() }}
               <div class="input-field col s12 m6 l6">
                   <input id="name" type="text" class="validate" name="name"  v-model="nombre" required/>
-                  <label for="name">Nombre y apellido</label>
+                  <label for="name">Nombre</label>
+              </div>
+              <div class="input-field col s12 m6 l6">
+                  <input id="lastname" type="text" class="validate" name="name"  v-model="lastname" required/>
+                  <label for="lastname">Apellido</label>
               </div>
                <div class="input-field col s12 m6 l6">
                   <input id="cedula" type="text" class="validate" name="cedula" v-model="cedula" required/>
                   <label for="cedula">Cedula</label>
               </div>
-              <div class="input-field col s12 m6 l6">
-                <input id="email" type="email" class="validate" name="email" v-model="email" required/>
-                <label for="email">Email</label>
-              </div>
-              <div class="input-field col s12 m6 l6">
+               <div class="input-field col s12 m6 l6">
                 <!--i class="material-icons prefix">phone</i-->
                 <input id="phone" type="tel" class="validate" name="phone" v-model="phone">
                 <label for="phone">Teléfono</label>
+              </div>
+              <div class="input-field col s12">
+                <input id="email" type="email" class="validate" name="email" v-model="email" required/>
+                <label for="email">Email</label>
               </div>
               <div class="input-field col s12">
                   <input id="direccion" type="text" class="validate" name="direccion" v-model="direccion" required/>
@@ -512,6 +516,7 @@
         el: "#use",
         data: {
           nombre : "",
+          lastname: "",
           cedula : "",
           email : "",
           direccion : "",
@@ -529,6 +534,7 @@
                     // Store
                 localStorage.setItem("name", this.nombre);
                 localStorage.setItem("cedula", this.cedula);
+                localStorage.setItem("lastname", this.lastname);
                 localStorage.setItem("email", this.email);
                 localStorage.setItem("phone", this.phone);
                 localStorage.setItem("direccion", this.direccion);
@@ -554,15 +560,15 @@
           },
           pay_200: function(){
             this.pago=20000;
-            this.url="https:sandboxpayment.payphone.com.ec/Pay/"+this.pago+"/ac0fdc7a-fba9-4580-9985-002902d8d92c/es/"
+            this.url="https://sandboxpayment.payphone.com.ec/Pay/"+this.pago+"/ac0fdc7a-fba9-4580-9985-002902d8d92c/es/"
           },
           pay_400: function(){
             this.pago=40000;
-            this.url="https:sandboxpayment.payphone.com.ec/Pay/"+this.pago+"/ac0fdc7a-fba9-4580-9985-002902d8d92c/es/"
+            this.url="https://sandboxpayment.payphone.com.ec/Pay/"+this.pago+"/ac0fdc7a-fba9-4580-9985-002902d8d92c/es/"
           },
           pay_600: function(){
             this.pago=60000;
-            this.url="https:sandboxpayment.payphone.com.ec/Pay/"+this.pago+"/ac0fdc7a-fba9-4580-9985-002902d8d92c/es/"
+            this.url="https://sandboxpayment.payphone.com.ec/Pay/"+this.pago+"/ac0fdc7a-fba9-4580-9985-002902d8d92c/es/"
           },
         }
       });

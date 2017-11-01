@@ -292,6 +292,15 @@ echo " " . sendPostData($url_send, $str_data);
   </body>
   <script type="text/javascript">
     /*Solo a modo de verificacion*/
-     document.getElementById("data_index").innerHTML = localStorage.getItem("name")+" "+localStorage.getItem("cedula")+" "+localStorage.getItem("email")+" "+localStorage.getItem("phone")+" "+localStorage.getItem("direccion");
+     document.getElementById("data_index").innerHTML = localStorage.getItem("name")+" "+localStorage.getItem("cedula")+" "+localStorage.getItem("email")+" "+localStorage.getItem("phone")+" "+localStorage.getItem("direccion")+" "+localStorage.getItem("lastname");
+
+     function remove_storage{
+        localStorage.removeItem("name");
+        localStorage.removeItem("lastname");
+        localStorage.removeItem("cedula");
+        localStorage.removeItem("phone");
+        localStorage.removeItem("email");
+        localStorage.removeItem("direccion");
+      }
   </script>
 </html> 
