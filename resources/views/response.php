@@ -79,6 +79,213 @@ echo '
 	</div>
 </div>
 ';
+
+$data = array(
+  "live"=> false,
+
+  "properties"=> array(
+
+    array(
+
+      "description" => "420420",
+
+      "name" => "Contract Number"
+
+    )
+
+  ),
+
+  "payments"=> array(
+
+    array(
+
+      "properties" => array(
+
+        array(
+
+          "description"=> "2223XXXX23",
+
+          "name"=> "account_number"
+
+        ),
+
+        array(
+
+          "description"=> "Banco Guayaquil",
+
+          "name"=> "bank"
+
+        )
+
+      ),
+
+      "amount"=> "114.00",
+
+      "method"=> "efectivo"
+
+    )
+
+  ),
+
+  "supplier"=> array(
+
+    "location" => array(
+
+      "point_of_sale" => array(
+
+        "code" => "002"
+
+      ),
+
+      "code" => "001"
+
+    )
+
+  ),
+
+  "sequence"=> 1000,
+
+  "taxes"=> array(
+
+    array(
+
+      "amount"=> "14.00",
+
+      "tax_code"=> "2",
+
+      "rate_code"=> "3",
+
+      "tax_rate"=> "14.0",
+
+      "taxable_amount"=> "100.00"
+
+    )
+
+  ),
+
+  "issue_date"=> "2017-11-01T09:00:00-05:00",
+
+  "customer"=> array(
+
+    "properties"=> array(),
+
+    "locality"=> "Guayaquil",
+
+    "address"=> "Carrera 10 Calle 1",
+
+    "email"=> "compras@datil.co",
+
+    "person"=> array(
+
+      "first_name"=> "Juan",
+
+      "middle_name"=> "A.",
+
+      "last_name"=> "Pérez"
+
+    ),
+
+    "phone"=> "57122222222222",
+
+    "tax_identification_type"=> "05",
+
+    "sublocality"=> "Centro",
+
+    "tax_identification"=> "0924447956",
+
+    "country"=> "EC",
+
+    "administrative_district_level_1"=> "Guayas"
+
+  ),
+
+  "totals"=> array(
+
+    "total_tax_amount"=> "14.00",
+
+    "subtotal_amount"=> "100.00",
+
+    "total_discount_amount"=> "100.00",
+
+    "total_amount"=> "114.00"
+
+  ),
+
+  "currency"=> "USD",
+
+  "items"=> array(
+
+    array(
+
+      "description"=> "Apple",
+
+      "properties"=> array(
+
+        array(
+
+          "description"=> "red",
+
+          "name"=> "color"
+
+        )
+
+      ),
+
+      "unit_price"=> "2.00",
+
+      "taxes"=> array(
+
+        array(
+
+          "amount"=> "14.00",
+
+          "tax_code"=> "2",
+
+          "rate_code"=> "3",
+
+          "tax_rate"=> "14.00",
+
+          "taxable_amount"=> "100.00"
+
+        )
+
+      ),
+
+      "subtotal_amount"=> "100.00",
+
+      "unit_code"=> "units",
+
+      "unit_discount"=> "1.00",
+
+      "quantity"=> "100"
+
+    )
+
+  )
+
+);
+
+$url_send ="https://api.datil.co/sales/invoices/issues";
+$str_data = json_encode($data);
+
+function sendPostData($url, $post){
+  $ch = curl_init($url);
+  curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");  
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+  curl_setopt($ch, CURLOPT_POSTFIELDS,$post);
+  curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+  curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+    "X-Api-Key: 77eaa60c2d704518a59616cb94fdd1df",
+    "X-Password: Cramire1982",
+    "Content-Type: application/json"
+  )); 
+  $result = curl_exec($ch);
+  curl_close($ch);  // Seems like good practice
+  return $result;
+}
+
+echo " " . sendPostData($url_send, $str_data);
+ 
 }
 ?>
 <div id="data_index" style="margin-top:55px;"></div>

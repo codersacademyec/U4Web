@@ -39,23 +39,41 @@
     </div>
   </nav>
 
-  <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <br><br>
-        <h1 class="header center text-lighten-2 mov">BIENVENIDOS</h1>
-        <div class="row center">
-          <!--h5 class="header col s12 light">U4Innovation</h5-->
-        </div>
-        <!--div class="row center">
-          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
-        </div-->
-        <br><br>
+  <!--div id="index-banner" class="parallax-container" style="min-height: 0px;">
+      <div class="carousel carousel-slider" data-indicators="true">
+        <a class="carousel-item" href="#one!"><img src="images/background1.jpg" alt="inicio"></a>
+        <a class="carousel-item" href="#two!"><img src="images/marketing.jpg" alt="marketing"></a>
+        <a class="carousel-item" href="#three!"><img src="images/planificacion.jpg" alt="planificacion"></a>
+      </div>      
+  </div-->
 
-      </div>
-    </div>
-    <div class="parallax"><img src="images/background1.jpg" alt="Unsplashed background img 1"></div>
+    <div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="images/background1.jpg" alt="inicio"> <!-- random image -->
+        <div class="caption center-align">
+          <h1 class="mov">Bienvenidos</h1>
+          <!--h5 class="light grey-text text-lighten-3">a u4innovation</h5-->
+        </div>
+      </li>
+      <li>
+        <img src="images/marketing.jpg" alt="marketing"> <!-- random image -->
+        <div class="caption left-align">
+          <h3 class="black-text">Tomate un tiempo</h3>
+          <h5 class="light black-text text-lighten-3">Para revisar nuestros servicios</h5>
+        </div>
+      </li>
+      <li>
+        <img src="images/planificacion.jpg" alt="planificacion"> <!-- random image -->
+        <div class="caption right-align">
+          <h3>Inscribete</h3>
+          <h5 class="light grey-text text-lighten-3">Curso: Elaboracion de plan de proyectos</h5>
+          <a href="#info" class="btn waves-effect white black-text darken-text-2 modal-trigger">Registrarme</a>
+        </div>
+      </li>
+    </ul>
   </div>
+
 
    <div class="fixed-action-btn">
     <a class="btn-floating btn-large blue" href="#top">
@@ -305,20 +323,20 @@
           <h3><i class="mdi-content-send brown-text"></i></h3>
           <form action="/enviarmensaje" method="POST">
                  {{ csrf_field() }}
-              <div class="input-field col s6">
-                  <input id="name" type="text" class="validate" name="nombre"/>
+              <div class="input-field col s12 m6 l6">
+                  <input id="name" type="text" class="validate" name="nombre" required/>
                   <label for="name">Nombre y apellido</label>
               </div>
-              <div class="input-field col s6">
-                <input id="email" type="email" class="validate" name="email"/>
+              <div class="input-field col s12 m6 l6">
+                <input id="email" type="email" class="validate" name="email" required/>
                 <label for="email">Email</label>
               </div>
               <div class="input-field col s12">
-                  <input id="asunto" type="text" class="validate" name="asunto"/>
+                  <input id="asunto" type="text" class="validate" name="asunto" required/>
                   <label for="asunto">Asunto</label>
               </div>
              <div class="input-field col s12">
-              <textarea id="mensaje" class="validate materialize-textarea" name="mensaje"></textarea>
+              <textarea id="mensaje" class="validate materialize-textarea" name="mensaje" required></textarea>
               <label for="mensaje">Mensaje</label>
             </div>
              <button class="btn waves-effect waves-light" type="submit">Enviar<i class="material-icons right">send</i></button>
@@ -362,24 +380,23 @@
     <div class="modal-content">
       
        <div class="row" v-if="acceso == 1">
-        <p class="blue-text">Primero debes proveer cierta informacion</p>
+        <p class="blue-text center">Por favor ingresa los datos de facturacion</p>
          <div class="card">
-            <div class="card-content">
               <form action="/response" method="POST" @submit.prevent="send" id="registro">
                  {{ csrf_field() }}
-              <div class="input-field col s6">
+              <div class="input-field col s12 m6 l6">
                   <input id="name" type="text" class="validate" name="name"  v-model="nombre" required/>
                   <label for="name">Nombre y apellido</label>
               </div>
-               <div class="input-field col s6">
+               <div class="input-field col s12 m6 l6">
                   <input id="cedula" type="text" class="validate" name="cedula" v-model="cedula" required/>
                   <label for="cedula">Cedula</label>
               </div>
-              <div class="input-field col s6">
+              <div class="input-field col s12 m6 l6">
                 <input id="email" type="email" class="validate" name="email" v-model="email" required/>
                 <label for="email">Email</label>
               </div>
-              <div class="input-field col s6">
+              <div class="input-field col s12 m6 l6">
                 <!--i class="material-icons prefix">phone</i-->
                 <input id="phone" type="tel" class="validate" name="phone" v-model="phone">
                 <label for="phone">Teléfono</label>
@@ -388,10 +405,9 @@
                   <input id="direccion" type="text" class="validate" name="direccion" v-model="direccion" required/>
                   <label for="direccion">Direccion</label>
               </div>
-              <div class="col s6 left">
+              <div class="col s12 center">
                   <button class="btn waves-effect waves-light" type="submit" >Registrar</button>
               </div>
-                <a href="#!" class="modal-action modal-close btn waves-effect waves-light">Cerrar</a>
               
           </form>
             </div>
@@ -402,17 +418,9 @@
          <div class="card">
             <div class="card-content">
              <div class="input-field col s12 center">
-               <a v-bind:href="{{ 'url' }}" target="_blank"><img src="images/payphone.png" class="responsive-img"></a>
+               <a v-bind:href="{{ 'url' }}" target="_blank"><img src="images/payphone_.png" class="responsive-img"></a>
              </div>
             </div>
-             <a href="#!" class="modal-action modal-close btn waves-effect waves-light">Cerrar</a>
-            </div>        
-        </div>
-         <div class="row" v-if="acceso == 5">
-         <div class="card">
-            <div class="card-content">
-                <h5 class="blue-text">Gracias por utilizar nuestros servicios</h5>
-             </div>
              <a href="#!" class="modal-action modal-close btn waves-effect waves-light">Cerrar</a>
             </div>        
         </div>
@@ -420,6 +428,54 @@
     </div>
            
 </div>
+  <div class="parallax-container valign-wrapper" id="location">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="images/location.png" alt="Location"></div>
+  </div>
+
+  <div id="info" class="modal">
+    <div class="modal-content">
+      <div class="row">
+        <div class="col s12 m12">
+          <div class="card">
+            <div class="card-image">
+             <img src="images/Banner-Formulario.jpg" alt="banner-form">
+              <!--span class="card-title">Titulo</span-->
+            </div>
+          </div>
+              <form action="/" method="POST">
+              <div class="">
+                 {{ csrf_field() }}
+              <div class="input-field col s12 m6 l6">
+                  <input id="names" type="text" class="validate" name="names"  required/>
+                  <label for="names">Nombres</label>
+              </div>
+               <div class="input-field col s12 m6 l6">
+                  <input id="epellidos" type="text" class="validate" name="apellidos"  required/>
+                  <label for="apellidos">Apellidos</label>
+              </div>
+              <div class="input-field col s12 m6 l6">
+                <input id="telephone" type="tel" class="validate" name="telephone" >
+                <label for="telephone">Teléfono</label>
+              </div>
+              <div class="input-field col s12 m6 l6">
+                <input id="correo" type="email" class="validate" name="correo" required/>
+                <label for="correo">Email</label>
+              </div>
+            </div>
+              <button class="btn waves-effect waves-light" type="submit" >Registrar</button>
+            </form>
+        </div>
+      </div>
+            
+          </div>        
+        </div>
+    </div>
 
   <footer class="page-footer teal" id="footer">
     <div class="container center">
@@ -476,7 +532,7 @@
                 localStorage.setItem("email", this.email);
                 localStorage.setItem("phone", this.phone);
                 localStorage.setItem("direccion", this.direccion);
-                alert("Tus datos han sido registrados, puedes proceder con el pago");
+                alert("Tus datos han sido enviados de forma exitosa");
                  this.acceso=2;
             } else {
               alert("Sorry, your browser does not support Web Storage...");
@@ -518,6 +574,14 @@
         $(document).ready(function(){
           $('.modal').modal();
        });
+
+        $(document).ready(function(){
+          $('.slider').slider();
+        });
+
+       $(document).ready(function(){
+          $('.carousel').carousel();
+        });
 
       $('.carousel.carousel-slider').carousel({fullWidth: true});
   </script>
